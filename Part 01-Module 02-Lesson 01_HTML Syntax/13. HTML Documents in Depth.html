@@ -1,0 +1,350 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Documents in Depth</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTML Syntax</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. HTML Structure Part 1.html">02. HTML Structure Part 1</a>
+    </li>
+    <li class="">
+      <a href="03. Make Your First Element.html">03. Make Your First Element</a>
+    </li>
+    <li class="">
+      <a href="04. Environments.html">04. Environments</a>
+    </li>
+    <li class="">
+      <a href="05. Text Editors.html">05. Text Editors</a>
+    </li>
+    <li class="">
+      <a href="06. Browsers.html">06. Browsers</a>
+    </li>
+    <li class="">
+      <a href="07. Workflow.html">07. Workflow</a>
+    </li>
+    <li class="">
+      <a href="08. Trees.html">08. Trees</a>
+    </li>
+    <li class="">
+      <a href="09. HTML and Trees.html">09. HTML and Trees</a>
+    </li>
+    <li class="">
+      <a href="10. Spot the Bug.html">10. Spot the Bug</a>
+    </li>
+    <li class="">
+      <a href="11. HTML Research.html">11. HTML Research</a>
+    </li>
+    <li class="">
+      <a href="12. HTML Structure Part 2.html">12. HTML Structure Part 2</a>
+    </li>
+    <li class="">
+      <a href="13. HTML Documents in Depth.html">13. HTML Documents in Depth</a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Wrap Up.html">14. Lesson Wrap Up</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. HTML Documents in Depth</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>An HTML document will usually </p></h3>
+  <div>
+  <h3 id="html-doctypes">HTML Doctypes</h3>
+<p>An HTML document will usually start with a type declaration (which is not a tag, so it should not have a closing tag). The declaration helps the browser determine what type of HTML document it’s trying to parse and display.</p>
+<p>If you’ve ever looked at an <a href="http://www.3riversstadium.com/index2.html" target="_blank">older website</a> using dev tools, you might have noticed a doctype that looks like this:</p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+
+(Triggers Standards mode but specifies an older form of validation.)</code></pre>
+<p>Or maybe you didn’t see a doctype at all?</p>
+<pre><code>&lt;html&gt;
+    … 
+&lt;/html&gt;
+
+(Triggers “Quirks” mode. This is bad.)</code></pre>
+<p>But newer websites (and your websites!) will have a declaration that looks like this:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+(Triggers Standards mode with all updated features.) 😊</code></pre>
+<p>Browsers look for this doctype declaration to determine which <strong>rendering mode</strong> to use to render the site. Generally, newer sites follow standard HTML specifications. The current standard HTML specification is called HTML5 (which is what you're learning!). On the other hand, older sites, created before HTML standards really existed, might use a different rendering mode that imitates the behavior of older browsers.</p>
+<p>If you are interested in reading more about doctype declarations and different rendering modes, you can read about them <a href="https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode" target="_blank">here</a>.</p>
+<p>Once you’ve declared the doctype, the next part of your HTML document is the <code>&lt;html&gt;</code> tag, which tells the browser that everything enclosed inside the <code>&lt;html&gt; ...  &lt;/html&gt;</code> should be parsed as HTML. Then you have the two main sections of your HTML document: <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>simple html tree structure</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/html-tree.png" alt="Basic HTML Tree Structure" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Basic HTML Tree Structure</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>The <code>&lt;head&gt;</code> will contain general inform</p></h3>
+  <div>
+  <h3 id="head-and-body"><code>&lt;head&gt;</code> and <code>&lt;body&gt;</code></h3>
+<p>The <code>&lt;head&gt;</code> will contain general information and metadata about the page, while the <code>&lt;body&gt;</code> will contain the content that will be displayed on the page. Here’s an example tree structure for a full HTML document:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>full html tree structure</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/full-html-tree.png" alt="Full HTML Tree Structure" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Full HTML Tree Structure</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>All the basics of HTML syntax that you’ve l</p></h3>
+  <div>
+  <p>All of the HTML syntax that you’ve learned in this lesson will help you create the <strong>content</strong> of the page, which is always contained inside the <code>&lt;body&gt;</code> tags. The <code>&lt;body&gt;</code> is always visible.</p>
+<p>The <code>&lt;head&gt;</code>, on the other hand, is never visible, but the information in it describes the page and links to other files the browser needs to render the website correctly. For instance, the <code>&lt;head&gt;</code> is responsible for:</p>
+<ul>
+<li>the document’s title (the text that shows up in browser tabs): <code>&lt;title&gt;About Me&lt;/title&gt;</code>.</li>
+<li>associated CSS files (for style): <code>&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;</code>.</li>
+<li>associated JavaScript files (multipurpose scripts to change rendering and behavior): <code>&lt;script src="animations.js"&gt;&lt;/script&gt;</code>.</li>
+<li>the charset being used (the text's <a href="https://en.wikipedia.org/wiki/Character_encoding" target="_blank">encoding</a>): <code>&lt;meta charset="utf-8"&gt;</code>.</li>
+<li>keywords, authors, and descriptions (often useful for <a href="https://en.wikipedia.org/wiki/Search_engine_optimization" target="_blank">SEO</a>): <code>&lt;meta name="description" content="This is what my website is all about!"&gt;</code>.</li>
+<li>… and more!</li>
+</ul>
+<p>At this point, just focus on these two tags:</p>
+<ul>
+<li><code>&lt;title&gt;About Me&lt;/title&gt;</code></li>
+<li><code>&lt;meta charset="utf-8"&gt;</code></li>
+</ul>
+<p><code>&lt;meta charset="utf-8"&gt;</code> is pretty standard, and will allow your website to display any <a href="http://unicode-table.com/en/" target="_blank">Unicode character</a>. (<a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank">Read more on how UTF-8 works here</a>.) <code>&lt;title&gt;</code> will define the title of the document and will be displayed in the tab of the browser window when a user visits the page.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Full HTML Template</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/full-html-template.png" alt="Full HTML Template" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Full HTML Template</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>HTML Validators</p></h3>
+  <div>
+  <h1 id="html-validators">HTML Validators</h1>
+<p>This might seem like a lot to remember, but thankfully, there are tools out there to help you. Much like how the Udacity Feedback Extension tells you when you've met all the requirements for a particular project, <a href="https://validator.w3.org" target="_blank">HTML validators</a> analyze your website and verify that you're writing valid HTML.</p>
+<p>I want you to try one out now!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>HTML Validator Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Using the <a href="https://validator.w3.org/#validate_by_input" target="_blank">W3C HTML Validator</a>, what happens when you enter the following HTML into the "validate by input" text box:</p>
+<pre><code>&lt;h1&gt;This is a title&lt;/h1&gt;</code></pre></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1468966685392" name="160924" id="a1468966685392">
+      <label for="a1468966685392"><p>The validator found errors or warnings in the HTML</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1468966768911" name="160924" id="a1468966768911">
+      <label for="a1468966768911"><p>The validator crashed because the HTML was in the incorrect format</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1468966799101" name="160924" id="a1468966799101">
+      <label for="a1468966799101"><p>The validator assumed the document was HTML5</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1468966902304" name="160924" id="a1468966902304">
+      <label for="a1468966902304"><p>The validator assumed the document was something other than HTML5</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The validator found errors or warnings in the HTML</li>
+      <li>The validator assumed the document was something other than HTML5</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>HTML Validator Part 2 Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Now, modify the HTML you entered previously so it follows the HTML template. Make sure to set doctype for HTML5!</p>
+<p>What is the message displayed once the validator successfully validates your code?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1468968001177" name="160938" id="a1468968001177">
+        <label for="a1468968001177"><p>No errors found while checking this document as HTML5!</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1468968243460" name="160938" id="a1468968243460">
+        <label for="a1468968243460"><p>Document checking completed.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1468968253968" name="160938" id="a1468968253968">
+        <label for="a1468968253968"><p>No errors or warnings to show.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1468968260169" name="160938" id="a1468968260169">
+        <label for="a1468968260169"><p>Document checking completed. No errors or warnings to show.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Document checking completed. No errors or warnings to show.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
